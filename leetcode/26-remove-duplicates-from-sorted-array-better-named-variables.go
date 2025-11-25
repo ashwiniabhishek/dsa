@@ -3,16 +3,16 @@ package main
 import "fmt"
 
 func removeDuplicates(nums []int) int {
-    currentUniqueNumIndex := 0
+    slowPointer := 0
     
-    for i:=1;i<len(nums);i++ {
-	    if nums[currentUniqueNumIndex] != nums[i] {
-		    currentUniqueNumIndex++
-		    nums[currentUniqueNumIndex] = nums[i]
+    for fastPointer:=1;fastPointer < len(nums);fastPointer++ {
+	    if nums[slowPointer] != nums[fastPointer] {
+		    slowPointer++
+		    nums[slowPointer] = nums[fastPointer]
 	    }
     }
     fmt.Println(nums)
-    return currentUniqueNumIndex + 1
+    return slowPointer + 1
 }
 
 
