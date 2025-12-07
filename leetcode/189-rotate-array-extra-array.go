@@ -19,4 +19,5 @@ func main() {
 	rotate([]int{1,2,3}, 2)
 	rotate([]int{1,2,3}, 3)
 	rotate([]int{1,2,3,4,5,6,7}, 3)
+	rotate([]int{1}, 3)
 }
